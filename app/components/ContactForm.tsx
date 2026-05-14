@@ -14,30 +14,33 @@ export default function ContactForm({ serviceName }: ContactFormProps) {
     requirement: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
         ...formData,
         serviceName,
       }),
-    });
+  });
 
-    const data = await res.json();
-
-    if (data.success) {
+  const data = await res.json();
+      if (data.success) {
       alert("Message Sent Successfully");
 
       setFormData({
@@ -49,7 +52,7 @@ export default function ContactForm({ serviceName }: ContactFormProps) {
     } else {
       alert("Failed to send message");
     }
-  };
+};
 
   return (
     <div
