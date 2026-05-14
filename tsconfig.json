@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/components/FeatureSection.jsx"  ],
+, "app/components/FeatureSection.jsx", "app/components/mobile-repair.jsx", "app/components/ServicesSection.jsx"  ],
   "exclude": ["node_modules"]
 }

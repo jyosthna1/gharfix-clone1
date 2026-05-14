@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#303030] text-gray-300 border-t-4 border-blue-500">
+    <footer className="bg-[#303030] text-gray-300 border-t-4 border-blue-500 mt-20">
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5">
 
         {/* CONTACT US */}
