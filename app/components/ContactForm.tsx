@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 
-export default function ContactForm({ serviceName }) {
+type ContactFormProps = {
+  serviceName: string;
+};
+
+export default function ContactForm({ serviceName }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
