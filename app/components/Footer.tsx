@@ -85,8 +85,7 @@ export default function Footer() {
         {/* LOGO + SOCIAL */}
         <div className="bg-[#111] text-center md:text-center">
           <div className="mb-4">
-            {/* Replace with your logo */}
-            <Image src="/images/cropped-Ghar-Fix-Logo_PNG-1.png" alt="gharfix" className="h-16 mx-auto mt-8 "/>
+            <Image src="/images/cropped-Ghar-Fix-Logo_PNG-1.png" alt="gharfix" width={80} height={160} className="h-16 mx-auto mt-8 "/>
           </div>
 
           <p className="mb-5">© 2026 Gharfix.</p>
