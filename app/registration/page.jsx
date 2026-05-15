@@ -11,6 +11,8 @@ export default function RegistrationForm() {
     userType: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -80,8 +82,9 @@ export default function RegistrationForm() {
       </div>
 
       <div>
-        <label className="font-semibold">Phone #</label>
+        <label htmlFor="name" className="font-semibold">Phone #</label>
         <input
+          id="name"
           placeholder="Phone Number"
           name="phone"
           value={formData.phone}
@@ -91,8 +94,9 @@ export default function RegistrationForm() {
       </div>
 
       <div>
-        <label className="font-semibold">Address</label>
+        <label htmlFor="address" className="font-semibold">Address</label>
         <input
+        id="address"
         placeholder="Address"
           name="address"
           value={formData.address}
@@ -104,8 +108,9 @@ export default function RegistrationForm() {
       <div>
         <p className="font-semibold mb-4">I am a</p>
 
-        <label className="block mb-4">
+        <label htmlFor="userType" className="block mb-4">
           <input
+            id="userType"
             type="radio"
             name="userType"
             value="Service Provider"
@@ -116,8 +121,9 @@ export default function RegistrationForm() {
           Service Provider
         </label>
 
-        <label className="block">
+        <label htmlFor="needService" className="block">
           <input
+            id="needService"
             type="radio"
             name="userType"
             value="I need Service"
@@ -129,9 +135,10 @@ export default function RegistrationForm() {
         </label>
       </div>
 
-      <button className="bg-gray-200 px-10 py-4 border">
-        Submit
-      </button>
+      <button type="submit" disabled={loading}
+  aria-busy={loading}>
+  {loading ? 'Sending...' : 'Submit'}
+</button>
     </form>
   );
 }

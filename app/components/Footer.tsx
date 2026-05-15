@@ -1,3 +1,4 @@
+import { Link } from "lucide-react";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -5,6 +6,7 @@ import {
   FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa";
+import Image  from "next/image";
 
 export default function Footer() {
   return (
@@ -37,7 +39,7 @@ export default function Footer() {
           <p>
             Email Us :
             <span className="text-blue-400 ml-1 cursor-pointer">
-              [ClickHere]
+              <a href="/registration">[ClickHere]</a>
             </span>
           </p>
         </div>
@@ -84,7 +86,7 @@ export default function Footer() {
         <div className="bg-[#111] text-center md:text-center">
           <div className="mb-4">
             {/* Replace with your logo */}
-            <img src="/images/cropped-Ghar-Fix-Logo_PNG-1.png" className="h-16 mx-auto mt-8 "/>
+            <Image src="/images/cropped-Ghar-Fix-Logo_PNG-1.png" alt="gharfix" className="h-16 mx-auto mt-8 "/>
           </div>
 
           <p className="mb-5">© 2026 Gharfix.</p>

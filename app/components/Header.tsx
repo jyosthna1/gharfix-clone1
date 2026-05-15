@@ -87,7 +87,7 @@ export default function Header() {
           >
             <Image
               src="/whatsapp-phone-icon.png"
-              alt="whatsapp"
+              alt=""
               width={26}
               height={26}
             />
@@ -97,7 +97,7 @@ export default function Header() {
           <Link href="/mobile-repair" className="tracking-widest">MOBILE REPAIR</Link>
           <Link href="/registration" className="tracking-widest">REGISTRATION</Link>
           <Link href="/job" className="tracking-widest">JOB</Link>
-          <Link href="/blog" className="tracking-widest">BLOG</Link>
+          <Link href="/" className="tracking-widest">BLOG</Link>
         </nav>
 
         {/* Mobile Menu Button */}

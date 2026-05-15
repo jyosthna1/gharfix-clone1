@@ -1,39 +1,25 @@
 "use client"
 import { useState, useEffect } from "react"
 import ServicesSection from "./components/ServicesSection"
+import HeroSlider from "./components/HeroSlider"
+import Image from "next/image"
 
 export default function Home() {
 
-  const slides = ["/slide1.jpg","/slide2.jpg","/slide3.jpg"]
   const [current,setCurrent]=useState(0)
 
-  useEffect(()=>{
-    const interval=setInterval(()=>{
-      setCurrent((prev)=>(prev+1)%slides.length)
-    },3000)
-
-    return ()=>clearInterval(interval)
-  },[])
-
   const scrollDown = () => {
-    document.getElementById("services").scrollIntoView({ behavior: "smooth" })
-  }
+  document.getElementById("services")?.scrollIntoView({
+    behavior: "smooth",
+  });
+};
 
   return (
     <div className="w-full">
 
       {/* SLIDER */}
       <div className="relative w-full h-[350px] overflow-hidden">
-
-        {slides.map((slide,index)=>(
-          <img
-            key={index}
-            src={slide}
-            className={`absolute w-full h-full object-cover transition-opacity duration-700 ${
-              index===current ? "opacity-100":"opacity-0"
-            }`}
-          />
-        ))}
+        <HeroSlider/>
 
         {/* Overlay */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black/40">

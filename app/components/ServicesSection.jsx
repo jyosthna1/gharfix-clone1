@@ -87,13 +87,13 @@ const services2 = [
     title: "Professional Driver Services",
     image: "/images/driver.jpg",
     desc: "Professional Driver Services: Reliable, experienced drivers at your service for safe and comfortable journeys. Whether it’s daily commutes, special occasions, or long-distance travel, our vetted drivers ensure punctuality, safety, and a stress-free experience on the road.",
-    link: "/best",
+    link: "/services/car-services",
   },
   {
     title: "Appliances AMC",
     image: "/images/amc-appliances.jpg",
     desc: "Comprehensive and Non Comprehensive Appliances AMC: Ensure the longevity and peak performance of your home appliances with our Annual Maintenance Contracts. From refrigerators to washing machines, our expert technicians provide regular check-ups, timely repairs, and reliable support, keeping your appliances running smoothly all year round.",
-    link: "/best",
+    link: "/service/plumbing-services",
   },
   {
     title: "Mobile Repair",
