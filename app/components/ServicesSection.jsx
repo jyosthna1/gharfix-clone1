@@ -87,7 +87,7 @@ const services2 = [
     title: "Professional Driver Services",
     image: "/images/driver.jpg",
     desc: "Professional Driver Services: Reliable, experienced drivers at your service for safe and comfortable journeys. Whether it’s daily commutes, special occasions, or long-distance travel, our vetted drivers ensure punctuality, safety, and a stress-free experience on the road.",
-    link: "/services/car-services",
+    link: "/service/car-services",
   },
   {
     title: "Appliances AMC",
